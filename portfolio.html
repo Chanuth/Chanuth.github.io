@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="header">
+        <div class="line"></div>
+        <nav>
+          <ul class="navigation" type="none">
+            <li><a href="portfolio.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="name">
+        <h1>Hello! <br>I'm Chanuth Wijesekara...</h1>
+        <h3>Associate Software Engineer</h3>
+        <br>
+        <div class="download">
+          <center><button id="download" onclick="downloadResume()">Download Resume</button></center>
+        </div>
+
+        <script>
+          function downloadResume() {
+            var fileID = '1zNFy8DnOh4IlJbNUOEzjSWDbPQQ5Jqdo';
+    
+            // Construct the download link
+            var downloadLink = 'https://drive.google.com/uc?id=' + fileID;
+    
+            // Create an invisible link and trigger a click on it
+            var a = document.createElement('a');
+            a.href = downloadLink;
+            a.download = 'chanuth_resume.pdf'; // Set the desired file name
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+          }
+        </script>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="line1"></div>
+      </div>
+  </body>
+</html>
